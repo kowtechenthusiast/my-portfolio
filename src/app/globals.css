@@ -116,15 +116,15 @@
     text-align: center;
     background: linear-gradient(
       to bottom,
-      rgb(161, 150, 246),
+      #a196f6,
       #3d366d,
       #1c183c,
       #1a134a,
       #0e0932,
       #050219,
-      rgb(7, 3, 34),
-      rgb(13, 1, 37),
-      rgb(0, 0, 0)
+      #070322,
+      #0d0125,
+      #000000
     );
     /* background-image: url("../../public/stars-1845852.jpg");
     height: 100vh; */
@@ -153,6 +153,10 @@
   @media (width >= 1400px) {
     max-width: 1400px;
   }
+}
+
+@utility mbl-bg {
+  background: linear-gradient(to top, #1a134a, #0e0932, #050219);
 }
 
 @utility text-glow {

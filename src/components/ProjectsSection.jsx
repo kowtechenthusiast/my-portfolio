@@ -13,8 +13,7 @@ const projects = [
   {
     id: 2,
     title: "Food delivery Client",
-    description:
-      "Food delivery app with Map and Stripe payment integration.",
+    description: "Food delivery app with Map and Stripe payment integration.",
     image: "/Swift-Go Client.png",
     tags: ["React.js", "Flask", "MySQL", "Map", "Framer-Motion", "Stripe"],
     demoUrl: "https://swiftgo-client.netlify.app/",
@@ -23,28 +22,27 @@ const projects = [
   {
     id: 3,
     title: "Hospital Database Management",
-    description:
-      "Hospital web application to all hospital related operations.",
+    description: "Hospital web application to all hospital related operations.",
     image: "/Hospital-Database.png",
     tags: ["HTML", "CSS", "Flask", "MySQL"],
-    demoUrl: "#",
+    demoUrl: "https://hospital-database-azwn.onrender.com/",
     githubUrl: "https://github.com/kowtechenthusiast/hospital-database",
   },
   {
     id: 4,
     title: "Food delivery Admin",
-    description:
-      "Admin dashboard for managing food delivery operations.",
+    description: "Admin dashboard for managing food delivery operations.",
     image: "/Swift-Go Admin.png",
     tags: ["React.js", "Flask", "MySQL"],
     demoUrl: "https://swiftgo-admin.netlify.app/",
-    githubUrl: "https://github.com/kowtechenthusiast/food-delivery/tree/main/admin-page",
+    githubUrl:
+      "https://github.com/kowtechenthusiast/food-delivery/tree/main/admin-page",
   },
 ];
 
 export const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-24 px-4 relative">
+    <section id="projects" className="py-24 relative">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
           {" "}
@@ -60,7 +58,7 @@ export const ProjectsSection = () => {
           {projects.map((project, key) => (
             <div
               key={key}
-              className="min-w-max group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
+              className="md:w-max w-screen group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
             >
               <div className="h-48 overflow-hidden">
                 <img
@@ -73,7 +71,10 @@ export const ProjectsSection = () => {
               <div className="p-6">
                 <div className="flex flex-wrap justify-center align-middle gap-2 mb-4">
                   {project.tags.map((tag) => (
-                    <span key={tag} className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
+                    <span
+                      key={tag}
+                      className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground"
+                    >
                       {tag}
                     </span>
                   ))}

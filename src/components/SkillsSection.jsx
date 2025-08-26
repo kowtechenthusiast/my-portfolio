@@ -122,7 +122,7 @@ export const SkillsSection = () => {
               <img
                 src={skill.image}
                 alt={skill.name}
-                className="h-16 w-14 mb-2"
+                className="h-11 md:h-14 mb-2"
               />
               <span className="text-sm font-medium text-green-50">
                 {skill.name}

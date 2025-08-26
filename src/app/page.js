@@ -6,6 +6,7 @@ import { ProjectsSection } from "../components/ProjectsSection";
 import { ContactSection } from "../components/ContactSection";
 import { Footer } from "../components/Footer";
 import { Toaster } from "react-hot-toast";
+import NavbarMobile from "@/components/NavbarMobile";
 
 export default function page() {
   return (
@@ -13,6 +14,7 @@ export default function page() {
 
       {/* Navbar */}
       <Navbar />
+      <NavbarMobile/>
       {/* Main Content */}
       <main>
         <HeroSection />

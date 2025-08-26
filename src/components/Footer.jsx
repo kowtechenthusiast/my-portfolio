@@ -2,10 +2,8 @@
 
 export const Footer = () => {
   return (
-    <footer className="py-6 px-8 bg-card relative border-t border-border mt-12 pt-8 flex flex-wrap justify-between items-center">
-      <p className="text-2xl">
-        Kowshik
-      </p>
+    <footer className="hidden py-6 px-8 bg-card relative border-t border-border mt-12 pt-8 md:flex flex-wrap justify-between items-center">
+      <p className="text-2xl">Kowshik</p>
       <p className="text-sm text-muted-foreground">
         &copy; {new Date().getFullYear()} All rights reserved.
       </p>

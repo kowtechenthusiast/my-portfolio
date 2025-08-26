@@ -1,5 +1,13 @@
 "use client";
-import { Instagram, Linkedin, Github, Mail, MapPin, Phone, Send } from "lucide-react";
+import {
+  Instagram,
+  Linkedin,
+  Github,
+  Mail,
+  MapPin,
+  Phone,
+  Send,
+} from "lucide-react";
 
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
@@ -151,7 +159,7 @@ export const ContactSection = () => {
                 >
                   <Linkedin />
                 </a>
-                
+
                 <a
                   href="https://github.com/kowtechenthusiast"
                   target="_blank"
@@ -240,7 +248,7 @@ export const ContactSection = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="cosmic-button w-full flex items-center justify-center gap-2"
+                className="cosmic-button cursor-pointer w-full flex items-center justify-center gap-2"
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
                 <Send size={16} />
