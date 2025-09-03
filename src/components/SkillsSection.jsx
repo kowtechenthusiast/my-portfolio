@@ -7,6 +7,10 @@ const skills = [
     image: "https://img.icons8.com/color/96/c-programming.png", // shiny C
   },
   {
+    name: "C#",
+    image: "https://img.icons8.com/color/96/c-sharp-logo.png", // C# logo
+  },
+  {
     name: "Java",
     image: "https://img.icons8.com/color/96/java-coffee-cup-logo.png", // glossy Java
   },
@@ -81,10 +85,6 @@ const skills = [
   {
     name: "GitHub",
     image: "https://img.icons8.com/ios-filled/100/ffffff/github.png",
-  },
-  {
-    name: "Postman",
-    image: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg",
   },
 ];
 
