@@ -2,8 +2,21 @@
 
 import { ArrowDown } from "lucide-react";
 import { TypeAnimation } from "react-type-animation";
+import { useState, useEffect } from "react";
 
 export const HeroSection = () => {
+  const [showScroll, setShowScroll] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const halfwayPoint = window.innerHeight / 5;
+      setShowScroll(window.scrollY < halfwayPoint);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <section
       id="hero"
@@ -46,7 +59,10 @@ export const HeroSection = () => {
         </div>
       </div>
 
-      <a href="#about" className="hidden md:block">
+      <a
+        href="#about"
+        className={`hidden md:block ${!showScroll && "md:hidden"}`}
+      >
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
           <span className="text-sm text-muted-foreground mb-2"> Scroll </span>
           <ArrowDown className="h-5 w-5 text-primary" />
