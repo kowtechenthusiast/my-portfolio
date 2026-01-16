@@ -38,6 +38,16 @@ const projects = [
     githubUrl:
       "https://github.com/kowtechenthusiast/food-delivery/tree/main/admin-page",
   },
+  {
+    id: 5,
+    title: "Student Learning Partner",
+    description:
+      "A web-based student learning platform with courses, games, community discussions using AI",
+    image: "/Learniverse.jpeg",
+    tags: ["React.js", "Tailwind CSS", "Express.js", "MongoDB", "WebSocket"],
+    demoUrl: "https://movie-store-silk.vercel.app/",
+    githubUrl: "https://github.com/kowtechenthusiast/movie-store",
+  },
 ];
 
 export const ProjectsSection = () => {
@@ -54,7 +64,7 @@ export const ProjectsSection = () => {
           crafted with attention to detail, performance, and user experience.
         </p>
 
-        <div className="flex justify-center flex-wrap  gap-16">
+        <div className="flex justify-center flex-wrap gap-16">
           {projects.map((project, key) => (
             <div
               key={key}
@@ -81,7 +91,7 @@ export const ProjectsSection = () => {
                 </div>
 
                 <h3 className="text-xl font-semibold mb-1"> {project.title}</h3>
-                <p className="text-muted-foreground text-sm mb-4">
+                <p className="text-muted-foreground text-sm mb-4 text-center m-auto">
                   {project.description}
                 </p>
                 <div className="flex justify-between items-center">

@@ -19,10 +19,11 @@ export const ContactSection = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("came");
 
-    if (name == "" || email == "" || message == "") {
+    if (!name || !email || !message) {
       toast.error("Please fill in all fields!", {
         icon: "⚠️",
         style: {
@@ -36,7 +37,7 @@ export const ContactSection = () => {
 
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
     if (!regex.test(email.trim())) {
-      toast.error("Invalid email!", {
+      toast.error("Please enter a valid email address!", {
         icon: "⚠️",
         style: {
           borderRadius: "10px",
@@ -52,41 +53,44 @@ export const ContactSection = () => {
     const templateParams = {
       from_name: name,
       from_email: email,
-      message: message,
+      message,
       to_name: "Kowshik",
       time: new Date().toLocaleString(),
     };
 
-    emailjs
-      .send(
+    try {
+      await emailjs.send(
         process.env.NEXT_PUBLIC_SERVICE_ID,
         process.env.NEXT_PUBLIC_TEMPLATE_ID,
         templateParams,
         process.env.NEXT_PUBLIC_EMAIL_KEY
-      )
-      .then(() => {
-        toast.success("Email sent successfully!", {
-          style: {
-            borderRadius: "10px",
-            background: "#1c183c",
-            color: "#fff",
-          },
-        });
-      })
-      .catch(() => {
-        toast.error("Something went wrong!", {
-          style: {
-            borderRadius: "10px",
-            background: "#1c183c",
-            color: "#fff",
-          },
-        });
+      );
+
+      toast.success("Email sent successfully!", {
+        style: {
+          borderRadius: "10px",
+          background: "#1c183c",
+          color: "#fff",
+        },
       });
-    setIsSubmitting(false);
-    setName("");
-    setEmail("");
-    setMessage("");
+
+      // reset ONLY on success
+      setName("");
+      setEmail("");
+      setMessage("");
+    } catch (error) {
+      toast.error("Failed to send email. Try again!", {
+        style: {
+          borderRadius: "10px",
+          background: "#1c183c",
+          color: "#fff",
+        },
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
+
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
@@ -248,7 +252,14 @@ export const ContactSection = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="cosmic-button cursor-pointer w-full flex items-center justify-center gap-2"
+                className={`
+    cosmic-button w-full flex items-center justify-center gap-2
+    ${
+      isSubmitting
+        ? "cursor-not-allowed opacity-60 pointer-events-none animate-none"
+        : "cursor-pointer hover:scale-[1.02] transition-transform"
+    }
+  `}
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
                 <Send size={16} />
