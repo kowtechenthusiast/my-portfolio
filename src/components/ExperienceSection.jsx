@@ -8,7 +8,7 @@ const experiences = [
   {
     role: "Associate Product Engineer Intern",
     company: "DeltaX",
-    logo: "/deltax.jfif",
+    logo: "/company/deltax.png",
     icon: Code,
     period: "Jan 2026 – Present",
     description:
@@ -18,7 +18,7 @@ const experiences = [
   {
     role: "Java Fullstack Internship",
     company: "Infosys Springboard",
-    logo: "/infosys_springboard.jfif",
+    logo: "/company/infosys_springboard.png",
     icon: Laptop,
     period: "Nov 2025 – Jan 2026",
     description:
@@ -28,7 +28,7 @@ const experiences = [
   {
     role: "Software Development Engineer",
     company: "Bluestock",
-    logo: "/bluestock.jfif",
+    logo: "/company/bluestock.png",
     icon: Briefcase,
     period: "Oct 2025 – Nov 2025",
     description:

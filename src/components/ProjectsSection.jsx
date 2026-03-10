@@ -5,7 +5,7 @@ const projects = [
     id: 1,
     title: "Movie Explorer",
     description: "A beautiful Movie search app using Next.js 15.",
-    image: "/Movie-Store.png",
+    image: "/projects/Movie-Store.png",
     tags: ["Next.js", "MongoDB", "TMDB API"],
     demoUrl: "https://movie-store-silk.vercel.app/",
     githubUrl: "https://github.com/kowtechenthusiast/movie-store",
@@ -14,7 +14,7 @@ const projects = [
     id: 2,
     title: "Food delivery Client",
     description: "Food delivery app with Map and Stripe payment integration.",
-    image: "/Swift-Go Client.png",
+    image: "/projects/Swift-Go Client.png",
     tags: ["React.js", "Flask", "MySQL", "Map", "Framer-Motion", "Stripe"],
     demoUrl: "https://swiftgo-client.netlify.app/",
     githubUrl: "https://github.com/kowtechenthusiast/food-delivery",
@@ -23,7 +23,7 @@ const projects = [
     id: 3,
     title: "Hospital Database Management",
     description: "Hospital web application to all hospital related operations.",
-    image: "/Hospital-Database.png",
+    image: "/projects/Hospital-Database.png",
     tags: ["HTML", "CSS", "Flask", "MySQL"],
     demoUrl: "https://hospital-database-azwn.onrender.com/",
     githubUrl: "https://github.com/kowtechenthusiast/hospital-database",
@@ -32,7 +32,7 @@ const projects = [
     id: 4,
     title: "Food delivery Admin",
     description: "Admin dashboard for managing food delivery operations.",
-    image: "/Swift-Go Admin.png",
+    image: "/projects/Swift-Go Admin.png",
     tags: ["React.js", "Flask", "MySQL"],
     demoUrl: "https://swiftgo-admin.netlify.app/",
     githubUrl:
@@ -43,7 +43,7 @@ const projects = [
     title: "Student Learning Partner",
     description:
       "A web-based student learning platform with courses, games, community discussions using AI",
-    image: "/Learniverse.jpeg",
+    image: "/projects/Learniverse.jpeg",
     tags: ["React.js", "Tailwind CSS", "Express.js", "MongoDB", "WebSocket"],
     demoUrl: "https://movie-store-silk.vercel.app/",
     githubUrl: "https://github.com/kowtechenthusiast/movie-store",
@@ -53,7 +53,7 @@ const projects = [
     title: "Medical Appointment & Records System",
     description:
       "An application for managing medical appointments, patient records, and doctor schedules with a user-friendly interface.",
-    image: "/MedVault.jpeg",
+    image: "/projects/MedVault.jpeg",
     tags: ["React.js", "Tailwind CSS", "PostgreSQL", "Spring Boot"],
     demoUrl: null,
     githubUrl: "https://github.com/kowtechenthusiast/Infosys-MedVault-Frontend",
@@ -74,11 +74,6 @@ export const ProjectsSection = () => {
           </p>
         </div>
 
-        {/* GRID SYSTEM: 
-            - 1 column on mobile
-            - 2 columns on tablets
-            - 3 columns on desktops
-        */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <div
@@ -97,8 +92,8 @@ export const ProjectsSection = () => {
               {/* Content Container */}
               <div className="p-6 flex flex-col flex-grow">
                 {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.slice(0, 3).map((tag) => (
+                <div className="flex justify-center flex-wrap gap-2 mb-4">
+                  {project.tags.map((tag) => (
                     <span
                       key={tag}
                       className="px-2 py-1 text-[10px] uppercase tracking-wider font-semibold border rounded-md bg-secondary/50 text-secondary-foreground"
