@@ -10,11 +10,11 @@ const skillCategories = {
       name: "Java",
       image: "https://img.icons8.com/color/96/java-coffee-cup-logo.png",
     },
-    { name: "Python", image: "https://img.icons8.com/color/96/python.png" },
     {
       name: "JavaScript",
       image: "https://img.icons8.com/color/96/javascript.png",
     },
+    { name: "Python", image: "https://img.icons8.com/color/96/python.png" },
   ],
 
   Frontend: [
@@ -40,10 +40,6 @@ const skillCategories = {
     },
     { name: "Flask", image: "https://img.icons8.com/nolan/96/flask.png" },
     {
-      name: "Servlet",
-      image: "https://img.icons8.com/color/96/java-coffee-cup-logo.png",
-    },
-    {
       name: "ASP.NET",
       image: "https://img.icons8.com/color/96/net-framework.png",
     },
@@ -51,11 +47,16 @@ const skillCategories = {
       name: "JDBC",
       image: "https://img.icons8.com/color/96/java-coffee-cup-logo.png",
     },
+    {
+      name: "Servlet",
+      image: "https://img.icons8.com/color/96/java-coffee-cup-logo.png",
+    },
   ],
 
   Databases: [
-    { name: "MySQL", image: "https://img.icons8.com/color/96/mysql-logo.png" },
     { name: "MongoDB", image: "https://img.icons8.com/color/96/mongodb.png" },
+    { name: "MySQL", image: "https://img.icons8.com/color/96/mysql-logo.png" },
+
     {
       name: "MS SQL Server",
       image: "https://img.icons8.com/color/96/microsoft-sql-server.png",

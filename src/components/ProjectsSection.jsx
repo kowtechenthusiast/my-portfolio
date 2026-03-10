@@ -13,15 +13,6 @@ const projects = [
   },
   {
     id: 2,
-    title: "Food delivery Client",
-    description: "Food delivery app with Map and Stripe payment integration.",
-    image: "/projects/Swift-Go Client.png",
-    tags: ["React.js", "Flask", "MySQL", "Map", "Framer-Motion", "Stripe"],
-    demoUrl: "https://swiftgo-client.netlify.app/",
-    githubUrl: "https://github.com/kowtechenthusiast/food-delivery",
-  },
-  {
-    id: 3,
     title: "Hospital Database Management",
     description: "Hospital web application to all hospital related operations.",
     image: "/projects/Hospital-Database.png",
@@ -30,17 +21,7 @@ const projects = [
     githubUrl: "https://github.com/kowtechenthusiast/hospital-database",
   },
   {
-    id: 4,
-    title: "Food delivery Admin",
-    description: "Admin dashboard for managing food delivery operations.",
-    image: "/projects/Swift-Go Admin.png",
-    tags: ["React.js", "Flask", "MySQL"],
-    demoUrl: "https://swiftgo-admin.netlify.app/",
-    githubUrl:
-      "https://github.com/kowtechenthusiast/food-delivery/tree/main/admin-page",
-  },
-  {
-    id: 5,
+    id: 3,
     title: "Student Learning Partner",
     description:
       "A web-based student learning platform with courses, games, community discussions using AI",
@@ -48,6 +29,25 @@ const projects = [
     tags: ["React.js", "Tailwind CSS", "Express.js", "MongoDB", "WebSocket"],
     demoUrl: "https://movie-store-silk.vercel.app/",
     githubUrl: "https://github.com/kowtechenthusiast/movie-store",
+  },
+  {
+    id: 4,
+    title: "Food delivery Client",
+    description: "Food delivery app with Map and Stripe payment integration.",
+    image: "/projects/Swift-Go Client.png",
+    tags: ["React.js", "Flask", "MySQL", "Map", "Framer-Motion", "Stripe"],
+    demoUrl: "https://swiftgo-client.netlify.app/",
+    githubUrl: "https://github.com/kowtechenthusiast/food-delivery",
+  },
+  {
+    id: 5,
+    title: "Food delivery Admin",
+    description: "Admin dashboard for managing food delivery operations.",
+    image: "/projects/Swift-Go Admin.png",
+    tags: ["React.js", "Flask", "MySQL"],
+    demoUrl: "https://swiftgo-admin.netlify.app/",
+    githubUrl:
+      "https://github.com/kowtechenthusiast/food-delivery/tree/main/admin-page",
   },
   {
     id: 6,

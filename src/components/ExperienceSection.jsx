@@ -12,36 +12,35 @@ const experiences = [
     icon: Code,
     period: "Jan 2026 – Present",
     description:
-      "Contributed to full-stack product lifecycles, implementing modern UI frameworks and enhancing system architecture for better performance.",
+      "Participating in an intensive engineering bootcamp focused on building industry-ready development skills. Working under mentor guidance to develop applications using C#, ASP.NET, and MS SQL while demonstrating progress through regular demos and technical evaluations.",
     skills: ["C#", "MS SQL", "ASP.NET", "Vue.js"],
   },
   {
-    role: "Java Fullstack Internship",
+    role: "Java Fullstack Virtual Internship",
     company: "Infosys Springboard",
     logo: "/company/infosys_springboard.png",
     icon: Laptop,
     period: "Nov 2025 – Jan 2026",
     description:
-      "Engineered responsive interfaces and robust backend services, focusing on seamless API integration and database optimization.",
+      "Completed a virtual internship focused on full-stack development. Built a Medical Appointment and Patient Record Management system using Spring Boot and PostgreSQL while attending regular review sessions and demonstrating progress through project presentations.",
     skills: ["React.js", "Tailwind CSS", "PostgreSQL", "Spring Boot"],
   },
   {
-    role: "Software Development Engineer",
+    role: "Software Development Trainee",
     company: "Bluestock",
     logo: "/company/bluestock.png",
     icon: Briefcase,
     period: "Oct 2025 – Nov 2025",
     description:
-      "Architecting scalable web solutions and optimizing networking layers to handle real-time stock market data with high efficiency.",
+      "Completed a learning-based training program focused on stock market fundamentals and web development technologies. Explored how stock trading platforms function and built small demo projects using React, Node.js, Bootstrap, and Tailwind CSS.",
     skills: [
       "HTTP Networking",
-      "Stock Market",
+      "Stock Market Basics",
       "Bootstrap CSS",
       "Tailwind CSS",
     ],
   },
 ];
-
 export const ExperienceSection = () => {
   return (
     <section
