@@ -79,7 +79,7 @@ export const HeroSection = () => {
         <div className="flex justify-center md:justify-end">
           <div className="relative w-[300px] h-[300px] md:w-[370px] md:h-[370px] rounded-full overflow-hidden  shadow-xl">
             <Image
-              src="/profile.png"
+              src="/display_picture.png"
               alt="Kowshik"
               fill
               className="object-cover"

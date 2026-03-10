@@ -1,4 +1,5 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import Image from "next/image";
 
 const projects = [
   {
@@ -82,10 +83,11 @@ export const ProjectsSection = () => {
             >
               {/* Image Container with Fixed Aspect Ratio */}
               <div className="relative aspect-video overflow-hidden">
-                <img
+                <Image
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
 
