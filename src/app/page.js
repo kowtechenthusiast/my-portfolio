@@ -7,26 +7,27 @@ import { ContactSection } from "../components/ContactSection";
 import { Footer } from "../components/Footer";
 import { Toaster } from "react-hot-toast";
 import NavbarMobile from "@/components/NavbarMobile";
+import { ExperienceSection } from "@/components/ExperienceSection";
 
 export default function page() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-
       {/* Navbar */}
       <Navbar />
-      <NavbarMobile/>
+      <NavbarMobile />
       {/* Main Content */}
       <main>
         <HeroSection />
         <AboutSection />
         <SkillsSection />
+        <ExperienceSection />
         <ProjectsSection />
         <ContactSection />
-        <Toaster position="bottom-center"/>
+        <Toaster position="bottom-center" />
       </main>
 
       {/* Footer */}
       <Footer />
     </div>
   );
-};
+}

@@ -48,68 +48,100 @@ const projects = [
     demoUrl: "https://movie-store-silk.vercel.app/",
     githubUrl: "https://github.com/kowtechenthusiast/movie-store",
   },
+  {
+    id: 6,
+    title: "Medical Appointment & Records System",
+    description:
+      "An application for managing medical appointments, patient records, and doctor schedules with a user-friendly interface.",
+    image: "/MedVault.jpeg",
+    tags: ["React.js", "Tailwind CSS", "PostgreSQL", "Spring Boot"],
+    demoUrl: null,
+    githubUrl: "https://github.com/kowtechenthusiast/Infosys-MedVault-Frontend",
+  },
 ];
 
 export const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-24 relative">
-      <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          {" "}
-          Featured <span className="text-primary"> Projects </span>
-        </h2>
+    <section id="projects" className="py-24 relative px-4">
+      <div className="container mx-auto max-w-6xl">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">
+            Featured <span className="text-primary">Projects</span>
+          </h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Each project was carefully crafted with attention to detail,
+            performance, and user experience.
+          </p>
+        </div>
 
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Here are some of my recent projects. Each project was carefully
-          crafted with attention to detail, performance, and user experience.
-        </p>
-
-        <div className="flex justify-center flex-wrap gap-16">
-          {projects.map((project, key) => (
+        {/* GRID SYSTEM: 
+            - 1 column on mobile
+            - 2 columns on tablets
+            - 3 columns on desktops
+        */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project) => (
             <div
-              key={key}
-              className="md:w-max w-screen group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
+              key={project.id}
+              className="group flex flex-col bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-[0_0_20px_rgba(var(--primary),0.1)]"
             >
-              <div className="h-48 overflow-hidden">
+              {/* Image Container with Fixed Aspect Ratio */}
+              <div className="relative aspect-video overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-120"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
 
-              <div className="p-6">
-                <div className="flex flex-wrap justify-center align-middle gap-2 mb-4">
-                  {project.tags.map((tag) => (
+              {/* Content Container */}
+              <div className="p-6 flex flex-col flex-grow">
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.tags.slice(0, 3).map((tag) => (
                     <span
                       key={tag}
-                      className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground"
+                      className="px-2 py-1 text-[10px] uppercase tracking-wider font-semibold border rounded-md bg-secondary/50 text-secondary-foreground"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <h3 className="text-xl font-semibold mb-1"> {project.title}</h3>
-                <p className="text-muted-foreground text-sm mb-4 text-center m-auto">
+                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                  {project.title}
+                </h3>
+
+                {/* DESCRIPTION: Line Clamp to 2 lines */}
+                <p className="text-muted-foreground text-sm mb-6 line-clamp-2">
                   {project.description}
                 </p>
-                <div className="flex justify-between items-center">
-                  <div className="flex space-x-3">
-                    <a
-                      href={project.demoUrl}
-                      target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <ExternalLink size={20} />
-                    </a>
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <Github size={20} />
-                    </a>
+
+                {/* Footer - Pushed to bottom */}
+                <div className="flex justify-between items-center mt-auto pt-4 border-t border-border/50">
+                  <div className="flex space-x-4">
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-muted-foreground hover:text-primary transition-colors"
+                        title="View Source Code"
+                      >
+                        <Github size={20} />
+                      </a>
+                    )}
+                    {project.demoUrl && (
+                      <a
+                        href={project.demoUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-muted-foreground hover:text-primary transition-colors"
+                        title="Live Demo"
+                      >
+                        <ExternalLink size={20} />
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
@@ -117,9 +149,9 @@ export const ProjectsSection = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-16">
           <a
-            className="cosmic-button w-fit flex items-center mx-auto gap-2"
+            className="cosmic-button inline-flex items-center gap-2 px-8 py-3 rounded-full bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-all shadow-lg shadow-primary/20"
             target="_blank"
             href="https://github.com/kowtechenthusiast"
           >

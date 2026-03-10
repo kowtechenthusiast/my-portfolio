@@ -3,6 +3,7 @@
 import { ArrowDown } from "lucide-react";
 import { TypeAnimation } from "react-type-animation";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export const HeroSection = () => {
   const [showScroll, setShowScroll] = useState(true);
@@ -18,56 +19,88 @@ export const HeroSection = () => {
   }, []);
 
   return (
-    <section
-      id="hero"
-      className="relative md:min-h-screen h-[80vh] flex flex-col items-center md:justify-center justify-around px-4"
-    >
-      <div className="container max-w-4xl mx-auto text-center z-10">
-        <div className="space-y-6">
-          <h1 className="text-5xl font-bold tracking-tight">
-            <span className="text-[#2C245F] bg-clip-text ">
-              Hello, I&apos;m{" "}
+    <section id="hero" className="relative min-h-screen flex items-center px-6">
+      <div className="container mx-auto max-w-6xl grid md:grid-cols-2 gap-12 items-center">
+        {/* LEFT CONTENT */}
+        <div className="space-y-6 text-center md:text-left">
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+            Hi, I'm
+            <span className="block text-[#2b2559] mt-2 md:text-left text-center">
+              {/* FIXED WIDTH CONTAINER */}
+              <span className="inline-block w-max">
+                <TypeAnimation
+                  sequence={[
+                    "Kowshik",
+                    2000,
+                    "Web Developer",
+                    1500,
+                    "Software Engineer",
+                    1500,
+                  ]}
+                  speed={50}
+                  repeat={Infinity}
+                />
+              </span>
             </span>
-            <TypeAnimation
-              sequence={[
-                "Kowshik",
-                2000,
-                "Web Developer",
-                1500,
-                "Software Engineer",
-                1500,
-              ]}
-              wrapper="span"
-              speed={50}
-              repeat={Infinity}
-            />
           </h1>
 
-          <p className="md:block hidden text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-            Passionate full-stack developer who loves crafting clean,
-            user-friendly web experiences. Driven to build scalable applications
-            and keep growing with new technologies.
-          </p>
-          {/* <p className="block md:hidden text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-            Full-stack developer passionate about creating meaningful digital
-            experiences.
-          </p> */}
+          <p className="text-lg text-muted-foreground max-w-xl">
+            <span className="block md:hidden">
+              Full-stack developer building clean and scalable web applications.
+            </span>
 
-          <div className="absolute bottom-1/4 right-[50%] translate-x-[50%] md:bottom-0 md:right-0 md:translate-0 md:relative cosmic-button w-max py-3 m-auto opacity-0 animate-fade-in-delay-4 hover:shadow-[0_0_10px_#3d366d] cursor-pointer">
-            <a href="#projects">View My Work</a>
+            <span className="hidden md:block">
+              Passionate full-stack developer who loves building clean,
+              user-friendly web experiences. Focused on creating scalable
+              applications and continuously learning new technologies.
+            </span>
+          </p>
+
+          {/* BUTTONS */}
+          <div className="flex gap-4 justify-center md:justify-start pt-2">
+            <a
+              href="/Kowshik_Resume.pdf"
+              target="_blank"
+              className="px-6 py-3 rounded-lg bg-[#2b2559] text-white font-medium hover:opacity-90 transition"
+            >
+              View Resume
+            </a>
+
+            <a
+              href="#contact"
+              className="px-6 py-3 rounded-lg bg-emerald-50 text-[#2b2559] font-medium hover:opacity-90 transition"
+            >
+              Contact Me
+            </a>
+          </div>
+        </div>
+
+        {/* RIGHT IMAGE */}
+        <div className="flex justify-center md:justify-end">
+          <div className="relative w-[300px] h-[300px] md:w-[370px] md:h-[370px] rounded-full overflow-hidden  shadow-xl">
+            <Image
+              src="/profile.png"
+              alt="Kowshik"
+              fill
+              className="object-cover"
+              priority
+            />
           </div>
         </div>
       </div>
 
-      <a
-        href="#about"
-        className={`hidden md:block ${!showScroll && "md:hidden"}`}
-      >
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
-          <span className="text-sm text-muted-foreground mb-2"> Scroll </span>
-          <ArrowDown className="h-5 w-5 text-primary" />
-        </div>
-      </a>
+      {/* SCROLL INDICATOR */}
+      {showScroll && (
+        <a
+          href="#about"
+          className="hidden md:block absolute bottom-10 left-1/2 -translate-x-1/2"
+        >
+          <div className="flex flex-col items-center animate-bounce">
+            <span className="text-sm text-muted-foreground mb-2">Scroll</span>
+            <ArrowDown className="h-5 w-5 text-primary" />
+          </div>
+        </a>
+      )}
     </section>
   );
 };
