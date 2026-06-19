@@ -27,7 +27,7 @@ const projects = [
       "A web-based student learning platform with courses, games, community discussions using AI",
     image: "/projects/Learniverse.jpeg",
     tags: ["React.js", "Tailwind CSS", "Express.js", "MongoDB", "WebSocket"],
-    demoUrl: "https://movie-store-silk.vercel.app/",
+    demoUrl: "https://my-study-partner.netlify.app/",
     githubUrl: "https://github.com/kowtechenthusiast/movie-store",
   },
   {

@@ -25,11 +25,19 @@ const skillCategories = {
       image: "https://img.icons8.com/color/96/tailwind_css.png",
     },
     {
+      name: "Bootstrap",
+      image: "https://img.icons8.com/color/96/bootstrap.png",
+    },
+    {
       name: "React.js",
       image: "https://img.icons8.com/plasticine/100/react.png",
     },
     { name: "Next.js", image: "https://img.icons8.com/fluency/96/nextjs.png" },
     { name: "Vue.js", image: "https://img.icons8.com/color/96/vue-js.png" },
+    {
+      name: "Vuetify",
+      image: "https://cdn.worldvectorlogo.com/logos/vuetify.svg",
+    },
   ],
 
   Backend: [
@@ -37,6 +45,10 @@ const skillCategories = {
     {
       name: "Express.js",
       image: "https://img.icons8.com/fluency/96/express-js.png",
+    },
+    {
+      name: "jQuery",
+      image: "https://img.icons8.com/ios-filled/100/jquery.png",
     },
     { name: "Flask", image: "https://img.icons8.com/nolan/96/flask.png" },
     {
