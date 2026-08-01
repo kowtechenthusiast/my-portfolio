@@ -50,7 +50,7 @@ export const Navbar = () => {
     <nav
       className={`${
         isScrolled && "opacity-80 transition-opacity duration-1000"
-      } md:fixed hidden top-5 left-1/2 translate-x-[-50%] md:flex justify-between items-center outline-none z-100 px-10 py-4 bg-gray-900 w-3/4 border border-blue-950 rounded-[50px]`}
+      } hidden lg:flex fixed top-5 left-1/2 translate-x-[-50%] justify-between items-center outline-none z-100 px-10 py-4 bg-gray-900 w-3/4 border border-blue-950 rounded-[50px]`}
     >
       <a href="/" className="flex items-center space-x-2">
         <img src="/logo.png" alt="logo" className="w-28" />

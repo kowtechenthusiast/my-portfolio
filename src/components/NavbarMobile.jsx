@@ -2,7 +2,6 @@
 import { AlignRight, X } from "lucide-react";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { redirect } from "next/navigation";
 function NavbarMobile() {
   const [isOpen, setOpen] = useState(false);
 
@@ -14,12 +13,16 @@ function NavbarMobile() {
     { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
   ];
+
   function handleClick(href) {
-    setOpen((prev) => !prev);
-    redirect(href);
+    setOpen(false);
+
+    document.querySelector(href)?.scrollIntoView({
+      behavior: "smooth",
+    });
   }
   return (
-    <nav className="md:hidden fixed bottom-0 w-screen mbl-bg z-100 p-6">
+    <nav className="lg:hidden fixed bottom-0 w-full mbl-bg z-50 p-6">
       <div className="flex justify-between align-middle">
         <a href="/">
           <img src="/logo.png" alt="logo" className="w-4/12" />

@@ -19,15 +19,17 @@ export const HeroSection = () => {
   }, []);
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center px-6">
-      <div className="container mx-auto max-w-6xl grid md:grid-cols-2 gap-12 items-center">
+    <section
+      id="hero"
+      className="relative min-h-screen flex items-center px-4 sm:px-6 overflow-x-hidden"
+    >
+      <div className="container mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* LEFT CONTENT */}
-        <div className="space-y-6 text-center md:text-left">
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+        <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-6">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight">
             Hi, I'm
-            <span className="block text-[#2b2559] mt-2 md:text-left text-center">
-              {/* FIXED WIDTH CONTAINER */}
-              <span className="inline-block w-max">
+            <span className="block mt-2 text-[#2b2559]">
+              <span className="inline-block">
                 <TypeAnimation
                   sequence={[
                     "Kowshik",
@@ -44,7 +46,7 @@ export const HeroSection = () => {
             </span>
           </h1>
 
-          <p className="text-lg text-muted-foreground max-w-xl">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-md">
             <span className="block md:hidden">
               Full-stack developer building clean and scalable web applications.
             </span>
@@ -57,18 +59,18 @@ export const HeroSection = () => {
           </p>
 
           {/* BUTTONS */}
-          <div className="flex gap-4 justify-center md:justify-start pt-2">
+          <div className="flex justify-center md:justify-start gap-3">
             <a
               href="/Kowshik_Resume.pdf"
               target="_blank"
-              className="px-6 py-3 rounded-lg bg-[#2b2559] text-white font-medium hover:opacity-90 transition"
+              className="px-4 sm:px-6 py-3 rounded-lg bg-[#2b2559] text-white font-medium hover:opacity-90 transition whitespace-nowrap"
             >
               View Resume
             </a>
 
             <a
               href="#contact"
-              className="px-6 py-3 rounded-lg bg-emerald-50 text-[#2b2559] font-medium hover:opacity-90 transition"
+              className="px-4 sm:px-6 py-3 rounded-lg bg-emerald-50 text-[#2b2559] font-medium hover:opacity-90 transition whitespace-nowrap"
             >
               Contact Me
             </a>
@@ -77,13 +79,13 @@ export const HeroSection = () => {
 
         {/* RIGHT IMAGE */}
         <div className="flex justify-center md:justify-end">
-          <div className="relative w-[300px] h-[300px] md:w-[370px] md:h-[370px] rounded-full overflow-hidden  shadow-xl">
+          <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-[370px] md:h-[370px] rounded-full overflow-hidden shadow-xl">
             <Image
               src="/display_picture.png"
               alt="Kowshik"
               fill
-              className="object-cover"
               priority
+              className="object-cover"
             />
           </div>
         </div>
@@ -93,7 +95,7 @@ export const HeroSection = () => {
       {showScroll && (
         <a
           href="#about"
-          className="hidden md:block absolute bottom-10 left-1/2 -translate-x-1/2"
+          className="hidden lg:block absolute bottom-10 left-1/2 -translate-x-1/2"
         >
           <div className="flex flex-col items-center animate-bounce">
             <span className="text-sm text-muted-foreground mb-2">Scroll</span>
